@@ -22,6 +22,7 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String title;
 
     private String description;
@@ -47,6 +48,9 @@ public class Movie {
     private List<Category> categories;
 
     @ManyToMany
+    @JoinTable(name = "movie_streaming",
+            joinColumns = @JoinColumn(name = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name = "streaming_id")
+    )
     private List<Streaming> streamings;
-
 }
