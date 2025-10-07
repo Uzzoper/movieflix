@@ -3,7 +3,6 @@ package com.movieflix.controller;
 import com.movieflix.controller.request.MovieRequest;
 import com.movieflix.controller.response.MovieResponse;
 import com.movieflix.entity.Movie;
-import com.movieflix.mapper.CategoryMapper;
 import com.movieflix.mapper.MovieMapper;
 import com.movieflix.service.MovieService;
 import lombok.RequiredArgsConstructor;
@@ -34,4 +33,5 @@ public class MovieController {
                 .map(movie -> MovieMapper.toMovieResponse(movie))
                 .toList());
     }
+
 }
