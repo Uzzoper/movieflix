@@ -28,13 +28,13 @@ public class MovieService {
         return repository.findAll();
     }
 
-    public List<Category> findCategories(List<Category> categories) {
+    private List<Category> findCategories(List<Category> categories) {
         List<Category> categoriesFound = new ArrayList<>();
         categories.forEach(category -> categoryService.findById(category.getId()).ifPresent(categoriesFound::add));
         return categoriesFound;
     }
 
-    public List<Streaming> findStreamings(List<Streaming> streamings) {
+    private List<Streaming> findStreamings(List<Streaming> streamings) {
         List<Streaming> streamingsFound = new ArrayList<>();
         streamings.forEach(streaming -> streamingService.findById(streaming.getId()).ifPresent(streamingsFound::add));
         return streamingsFound;
