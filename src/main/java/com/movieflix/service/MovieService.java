@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -26,6 +27,10 @@ public class MovieService {
 
     public List<Movie> findAll() {
         return repository.findAll();
+    }
+
+    public Optional<Movie> findById(Long id) {
+        return repository.findById(id);
     }
 
     private List<Category> findCategories(List<Category> categories) {
