@@ -9,11 +9,17 @@ spring:
     driver-class-name: org.postgresql.Driver
 
   jpa:
-    database-plataform: org.hibernate.dialect.PostrgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
 
   flyway:
     enabled: true
+
+springdoc:
+  api-docs:
+    path: /api/api-docs
+  swagger-ui:
+    path: /swagger/index.html
 
 movieflix:
   security:
