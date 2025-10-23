@@ -5,7 +5,6 @@ import com.movieflix.controller.response.MovieResponse;
 import com.movieflix.entity.Movie;
 import com.movieflix.mapper.MovieMapper;
 import com.movieflix.service.MovieService;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/movieflix/movie")
 @RequiredArgsConstructor
-@Tag(name = "Movie", description = "Recurso responsável pelo gerenciamento dos filmes.")
 public class MovieControllerImpl implements MovieController {
 
     private final MovieService movieService;
